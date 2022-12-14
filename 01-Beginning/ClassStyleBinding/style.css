@@ -1,0 +1,21 @@
+.box{
+    width:100px;
+    height:100px;
+    background-color: blueviolet;
+}
+
+.borderBlack{
+    border: 3px dashed rgb(47, 46, 46)
+}
+
+.green{
+    background-color: green;
+}
+
+.red{
+    background-color: red;
+}
+
+.blue{
+    background-color: blue;
+}

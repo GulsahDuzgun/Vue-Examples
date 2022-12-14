@@ -6,12 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <div id="app">
         <h2>{{ title }}</h2>
         <button @click="changeTitle('Left Button')">Title değiştir</button>
         <button @click="changeTitle('Right Button')">Title değiştir</button>
+        <br><br>
+        {{changeTitle('String interpolation')}}
+        <div class="box" @click="changeTitle('Box üzerinden gelen başlık')"></div>
+        <div class="box" @mousemove="updateCoordinats('Mousemove Box üzerinden gelen başlık',$event)"></div>
+        <span>{{coords.x}},{{coords.y}}</span>
     </div>
     <script src="/01-Beginning/VueInstance/app.js"></script>  
    

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app" class="container">
+        <div class="row mt-5">
+            <div class="col-md-4  offset-1">
+                <div class="card p-2 text-center">
+                    <h2>Sayac:{{counter}}</h2>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <button class="bg-primary me-2" @click="counter++">+</button>
+                        <button class="bg-danger " @click="counter--">-</button>
+                    </div>
+                    <div class="alert alert-warning">{{updateCounter}}</div>
+                </div>
+            </div>
+            <div class="col-md-4  offset-1">
+                <div class="card p-2 text-center">
+                    <h2>Sayac:{{counter1}}</h2>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <button class="bg-primary me-2" @click="counter1++">+</button>
+                        <button class="bg-danger " @click="counter1--">-</button>
+                    </div>
+                    <div class="alert alert-warning">{{getCounter2()}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="./counter.js"></script>
+</body>
+</html>
