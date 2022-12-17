@@ -3,10 +3,10 @@
     <div class="container">
       <h3 >To-do App</h3>
       <hr class="my-3"/>
-      <InputSection/>
+      <InputSection @addItem="pushList"/>
       <hr class="my-3"/>
-      <ListItem/>
-      <ResultLine/>
+      <ListItem  @updateListAfterDelete="removeList"  />
+      <ResultLine mydata="bu benim string datam" :count="data.todoList.length"/>
     </div>
   </div>
 </template>
@@ -18,35 +18,43 @@ export default{
   components:{
     InputSection:inputSection,
     ListItem:itemList,
-    ResultLine:resultLine
-  },
+    ResultLine:resultLine},
   data(){
     return{
-      todoList:[
-        {id:1, text:"Todo1"},
-        {id:2, text:"Todo2"},
-        {id:3, text:"Todo3"},
-        {id:3, text:"Todo4"}
-      ]
+      data:{
+        todoList:[
+          {id:1, text:"Todo1"},
+          {id:2, text:"Todo2"},
+          {id:3, text:"Todo3"},
+          {id:3, text:"Todo4"}
+        ],
+      }
     }
   },
+  provide(){
+    return{
+        todoList:this.data.todoList,
+        addItem:this.pushList
+    }
+  },
+ 
   methods:{
     pushList(event){
      
-      this.todoList.push(
+      this.data.todoList.push(
         {
           id: new Date(),
-          text:event.target.value
+          text:event
         });
     },
     removeList(item){
-      let index=this.todoList.findIndex(i => i == item)
-      this.todoList.splice(index,1)
+      let index=this.data.todoList.findIndex(i => i == item)
+      this.data.todoList.splice(index,1)
     }
   },
   computed:{
     getCountItems(){
-      return this.todoList.length;
+      return this.data.todoList.length;
     }
   }
 }

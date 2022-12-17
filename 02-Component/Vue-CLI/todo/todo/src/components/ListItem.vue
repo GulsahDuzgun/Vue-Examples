@@ -1,7 +1,24 @@
 <template>
+  <div>
     <ul>
-        <li class="d-flex justify-content-between align-items-center" >.text
-          <button class="btn btn-danger" >Sil</button>
-        </li>
-      </ul> 
+        <ShowItem @deleteItem="$emit('updateListAfterDelete',$event)" />
+    </ul> 
+  </div>
 </template>
+<script>
+import showItem from '@/components/ShowListItem.vue'
+export default{
+  data(){},
+  props:{
+    todoListe:{
+      type:Array,
+      required : false,
+      default :()=>[]
+    }
+  },
+  components:{
+      ShowItem:showItem 
+  },
+  
+}
+</script>
