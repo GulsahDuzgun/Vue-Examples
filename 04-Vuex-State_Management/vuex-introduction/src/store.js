@@ -24,7 +24,11 @@ const dataVer = createStore({
 
     },
     getters:{
-        woodItem:state => state.furniture.filter(i=>i.content == "wood"),
+        woodItem(state){
+            console.log("geldi")
+            console.log(state.furniture)
+            return state.furniture.filter(i=> i.content === "wood")
+            },
         setActiveUser(state){
             const user = {
                 ...state.activeUser
@@ -33,6 +37,18 @@ const dataVer = createStore({
             return user;
         }
     },
+    mutations:{
+        addItem(state, item){
+            this.getters.woodItem
+            state.furniture.push(item);
+        }
+    },
+    actions:{
+        addItemAsync(context, item){
+            context.commit("addItem",item)
+            
+        }
+    }
 
 })
 

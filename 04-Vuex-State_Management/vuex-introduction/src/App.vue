@@ -8,10 +8,10 @@
         {{ item }}
       </li><br><hr>
       <li v-for="i in $store.state.employeeList" :key="i">{{i}}</li>-->
-      <li v-for="item in showWoodList()" :key="item.id">{{ item.name }}</li>
+      <li v-for="item in showWoodList" :key="item.id">{{ item.name }}</li>
     </ul> 
     <button class="btn" @click="addList">Ekle</button>
-  
+   
   </div>
 </template>
 
@@ -22,16 +22,21 @@ export default{
    // console.log(this.$store.state.permissions)
     // //console.log(this.$store.state.person)
     // console.log(this.$store.getters.setActiveUser)
-    // console.log(this.$store.state.furniture)
+    console.log("yüklendi")
   },
    methods:{
     addList(){
-     console.log(this.$store.getters.woodItem)
-     this.$store.state.furniture.push({id:new Date().getTime(), name:"raf", content:"wood"})
+     console.log(this.$store)
+     //this.$store.state.furniture.push({id:new Date().getTime(), name:"raf", content:"wood"})
+     this.$store.commit("addItem", {id:new Date().getTime(), name:"raf", content:"wood"})
+    //this.$store.dispatch("addItemAsync",{id:new Date().getTime(), name:"raf", content:"wood"})
     },
     showWoodList(){
-      return this.$store.getters.woodItem
+      return this.$store.getters.woodItem()
     }
-  },computed : mapGetters(["woodItem", "setActiveUser"])
+  },computed :{
+    ...mapGetters(["woodItem","setActiveUser"]),
+  
+  } 
 }
 </script>
