@@ -1,3 +1,16 @@
 {
-    "bookMarks" : []
+  "bookMarks": [
+    {
+      "title": "hdfh",
+      "url": "dszdf",
+      "description": "sfa",
+      "id": 1
+    },
+    {
+      "title": "dsf",
+      "url": "rewr",
+      "description": "gednaga",
+      "id": 3
+    }
+  ]
 }

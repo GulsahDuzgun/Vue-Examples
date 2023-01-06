@@ -1,0 +1,40 @@
+import {createStore} from "vuex"
+import createPersistedState from "vuex-persistedstate"
+import SecureLS from "secure-ls";
+var ls = new SecureLS({isCompression: false});
+//store sayfa her yenilendiğinde tekrar üretilir. Bu yüzden state vb bilgiler uçar
+
+export default createStore({
+    state:{
+        user:null,
+        key :"bookMark12Bookmsrk1232?e3e3!"
+    },
+    mutations:{
+        setUser(state,user){
+            state.user = user
+        },
+        logoutUser(state){
+            state.user = null;
+        }
+    },
+    getters:{
+        _isAuthenticated : state => state.user != null,
+        _getCurrentUser(state){
+            
+            const user = state.user
+            delete user?.password
+            return user;
+        },
+        _saltKey :state => state.key
+
+    },
+    plugins:[
+        createPersistedState({
+            storage:{
+                getItem: key => ls.get(key),
+                setItem: (key,value) => ls.set(key,value),
+                removeItem: (key) => ls.remove(key),
+            },
+        }),
+    ]
+});
