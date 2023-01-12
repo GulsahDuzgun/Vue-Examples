@@ -44,10 +44,8 @@ routerPage.beforeEach((to,from,next)=> {
     }else{
         next()
     }
-
-    console.log("to",to)
-    console.log("from",from)
-    next();
+    // console.log("to",to)
+    // console.log("from",from)
 
 })
 

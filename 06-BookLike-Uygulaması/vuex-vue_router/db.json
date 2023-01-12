@@ -1,85 +1,99 @@
 {
   "users": [
     {
-      "userName": "Mouse potato",
-      "fullName": null,
-      "password": "U2FsdGVkX19rX7wCkHXlfDAAl/4HZCKVEuAqAVdiQME=",
-      "id": 1
-    },
-    {
-      "userName": "Mouse potato",
-      "fullName": "Gülşah Düzgün",
-      "password": "U2FsdGVkX18Az4XTm+KH6U7OYp2iMWM1U9xiaaVzKEo=",
-      "id": 2
-    },
-    {
-      "userName": "Mouse potato",
-      "fullName": "Esra",
-      "password": "U2FsdGVkX18r4iBZz/3hKULkDcuJ+FzsMuRZrH0OjxU=",
-      "id": 3
-    },
-    {
-      "userName": "Mouse potato",
-      "fullName": null,
-      "password": "U2FsdGVkX18Hw5E+ew344oBus3FJAwo+hBuEBv0q+eU=",
-      "id": 4
-    },
-    {
-      "userName": "Mouse potato",
-      "fullName": "ede",
-      "password": "U2FsdGVkX18coO53G9mHxG5EGdGrwQsL5RgPMhzDSz8=",
-      "id": 5
-    },
-    {
-      "userName": "Mouse potato",
-      "fullName": "Gülşah Düzgün",
-      "password": "U2FsdGVkX19H6Nbh1vTWK65/RUYsJZ1/yKAWGx+2Di4=",
-      "id": 6
-    },
-    {
-      "userName": "eses",
-      "fullName": "es",
-      "password": "U2FsdGVkX18zr6EyQOgZu1VQa/p7ZX0GQ0VyiysTfaY=",
-      "id": 7
-    },
-    {
-      "userName": "_esra",
-      "fullName": "Esra Nur Düzgğn",
-      "password": "3f1809b456da01b19d23a511707559d27d889698",
-      "id": 8
-    },
-    {
+      "0": 5,
       "userName": "aden",
       "fullName": "Aden",
       "password": "3f1809b456da01b19d23a511707559d27d889698",
-      "id": 9
+      "id": 9,
+      "likes": [
+        2,
+        1,
+        4,
+        5
+      ],
+      "bookmarks": []
+    },
+    {
+      "userName": "Deniz",
+      "fullName": "Deniz Düzgün",
+      "password": "7d0916cf8a7f7bedddc03a041014562b87f06b3f",
+      "id": 10,
+      "likes": [],
+      "bookmarks": []
     }
   ],
-  "bookmarks": [],
+  "bookmarks": [
+    {
+      "title": "Patika",
+      "url": "https://www.patika.dev/",
+      "categoryId": 3,
+      "description": "Güzel bir platform",
+      "userId": 9,
+      "created_at": "2023-01-06T13:34:11.496Z",
+      "id": 1
+    },
+    {
+      "title": "Vue ",
+      "url": "https://scrimba.com/scrim/cMPa2Uk?pl=pnyzgAP",
+      "categoryId": 1,
+      "description": "Simba",
+      "userId": 9,
+      "created_at": "2023-01-06T13:35:32.936Z",
+      "id": 2
+    },
+    {
+      "title": "Prototürk",
+      "url": "https://www.youtube.com/@PROTOTURKCOM",
+      "categoryId": 3,
+      "description": "Tayfun Erbilen",
+      "userId": 9,
+      "created_at": "2023-01-06T13:36:31.800Z",
+      "id": 3
+    },
+    {
+      "title": "Dream Land",
+      "url": "https://www.google.com/search?q=isko%C3%A7ya+edinburgh&sxsrf=ALiCzsbJEVPyVwqjiLSFmUgMdJN-WgxHDA:1673002762507&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi08Pf65LL8AhV-SPEDHW0cDzQQ_AUoAXoECAEQAw&biw=1490&bih=722&dpr=1.25#imgrc=4KMzH3zdHTezVM",
+      "categoryId": 6,
+      "description": "Hayallerimin peşindeyim.Asla vazgeçmem:))",
+      "userId": 9,
+      "created_at": "2023-01-06T13:37:15.080Z",
+      "id": 4
+    },
+    {
+      "title": "Mozilla",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      "categoryId": 4,
+      "description": "Mozilla",
+      "userId": 10,
+      "created_at": "2023-01-06T14:11:16.272Z",
+      "id": 5
+    }
+  ],
   "categories": [
     {
-      "id":1,
-      "name" : "Vue"
+      "id": 1,
+      "name": "Vue"
     },
     {
-      "id":2,
-      "name" : "React.js"
+      "id": 2,
+      "name": "React.js"
     },
     {
-      "id":3,
-      "name" : "Frontend"
+      "id": 3,
+      "name": "Frontend"
     },
     {
-      "id":4,
-      "name":"Backend"
+      "id": 4,
+      "name": "Backend"
     },
     {
-      "id":5,
-      "name" :"Cloud"
+      "id": 5,
+      "name": "Cloud"
     },
     {
-      "id":6,
-      "name":"Sosyal Yaşam"
+      "id": 6,
+      "name": "Sosyal Yaşam"
     }
-    ]
+  ]
 }
