@@ -72,6 +72,9 @@ export default{
         console.log(likes_response)
         this.$store.commit("setLikes",likes)
        })
+    },
+    saveBookmarks(){
+      
     }
   }
 }
